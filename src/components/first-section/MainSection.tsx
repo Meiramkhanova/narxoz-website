@@ -8,7 +8,7 @@ function MainSection() {
         <div className="left-main flex flex-col w-2/5">
           <div className="bg-black/70 h-full pl-16 flex items-center">
             <div className="text-btns flex flex-col gap-7">
-              <div className="text-white font-semibold tracking-wide uppercase text-5xl font-bebas leading-tight pr-4">
+              <div className="text-white font-semibold tracking-wide uppercase text-5xl leading-tight pr-4">
                 Ознакомьтесь <br /> с актуальными вакансиями в нашем
                 университете
               </div>
