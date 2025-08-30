@@ -1,3 +1,5 @@
+import VacancyItem from "./components/VacancyItem";
+
 const vacancies = [
   {
     id: 1,
@@ -16,7 +18,11 @@ const vacancies = [
 function RightMainSection() {
   return (
     <div className="right-main-section h-full w-3/5 flex justify-end items-center pr-16">
-      RightMainSection
+      <div className="flex flex-col gap-6">
+        {vacancies.map((vacancy) => (
+          <VacancyItem {...vacancy} key={vacancy.id} />
+        ))}
+      </div>
     </div>
   );
 }

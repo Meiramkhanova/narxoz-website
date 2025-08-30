@@ -3,17 +3,20 @@ import Footer from "./footer/Footer";
 import Header from "./header/Header";
 
 interface LayoutProps {
+  hero?: ReactNode;
   children: ReactNode;
 }
 
-function Layout({ children }: LayoutProps) {
+function Layout({ children, hero }: LayoutProps) {
   return (
     <div className="layout-wrapper font-bebas">
-      <div className="header-main-wrapper h-screen bg-gray-200 bg-[url(/images/photo1.png)] bg-cover bg-center">
+      <div className="header-main-wrapper h-screen bg-[url(/images/photo1.png)] bg-cover bg-center">
         <Header />
 
-        <main className="h-[calc(100vh-7rem)]">{children}</main>
+        <div className="h-[calc(100vh-7rem)]">{hero}</div>
       </div>
+
+      <main>{children}</main>
 
       <Footer />
     </div>
