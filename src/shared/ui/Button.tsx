@@ -3,7 +3,7 @@ import clsx from "clsx";
 import type { ReactNode } from "react";
 import type { ButtonHTMLAttributes } from "react";
 
-type Variant = "primary" | "secondary" | "danger";
+type Variant = "primary" | "secondary";
 type Size = "sm" | "md" | "lg";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -25,9 +25,9 @@ export default function Button({
 
   const variants: Record<Variant, string> = {
     primary:
-      "bg-primary hover:bg-primary/85 transition-all duration-300 text-white hover:bg-primary-700 focus:ring-blue-500",
-    secondary: "bg-white hover:bg-white/90 transition-all duration-300",
-    danger: "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500",
+      "bg-primary hover:bg-transparent transition-all ease-in-out duration-500 text-white hover:text-primary border border-primary",
+    secondary:
+      "bg-white hover:bg-transparent transition-all duration-500 ease-in-out hover:text-white border border-white",
   };
 
   const sizes: Record<Size, string> = {

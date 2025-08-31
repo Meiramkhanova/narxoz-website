@@ -82,7 +82,7 @@ function OurTeamSection() {
         <div className="wrapper flex flex-col gap-6 pb-20">
           <SectionTitle title="Наша команда" />
 
-          <div className="teams-wrapper grid grid-cols-5 gap-6">
+          <div className="teams-wrapper grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
             {teams.map((team) => (
               <TeamItem key={team.id} {...team} />
             ))}

@@ -32,7 +32,7 @@ function StructureSection() {
         <div className="wrapper py-20 flex flex-col gap-6">
           <SectionTitle title="Структура HR-отдела" />
 
-          <div className="departments-wrapper grid grid-cols-4 gap-6">
+          <div className="departments-wrapper grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
             {departments.map((department) => (
               <StructureItem key={department.id} {...department} />
             ))}

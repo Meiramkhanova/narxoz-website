@@ -178,10 +178,10 @@ function Footer() {
         <div className="footer-top-wrapper py-20 bg-primary text-white">
           <Container>
             <div className="inner-wrapper flex flex-col gap-12">
-              <div className="inner-top grid grid-cols-4 gap-12">
-                <LogoAnother className="w-48" />
+              <div className="inner-top grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <LogoAnother className="w-48 order-1 h-fit" />
 
-                <div className="contacts flex flex-col gap-6">
+                <div className="contacts flex flex-col gap-6 order-3 md:order-2">
                   <div className="contact-title font-semibold">Контакты</div>
 
                   <div className="address-email flex flex-col gap-3">
@@ -193,24 +193,24 @@ function Footer() {
                   </div>
                 </div>
 
-                <div className="social-media flex flex-col gap-6">
+                <div className="social-media flex flex-col gap-6 order-2 md:order-3">
                   <div className="social-media-title font-semibold">
                     Соц. сети
                   </div>
 
                   <div className="social-platforms flex items-center gap-4">
-                    <Facebook className="w-8 h-fit" />
+                    <Facebook className="w-8 h-fit cursor-pointer" />
 
-                    <Instagram className="w-8 h-fit" />
+                    <Instagram className="w-8 h-fit cursor-pointer" />
 
-                    <Telegram className="w-8 h-fit" />
+                    <Telegram className="w-8 h-fit cursor-pointer" />
 
-                    <Youtube className="w-8 h-fit" />
+                    <Youtube className="w-8 h-fit cursor-pointer" />
                   </div>
                 </div>
               </div>
 
-              <div className="inner-middle grid grid-cols-4 gap-12">
+              <div className="inner-middle grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                 {links.map((link) => (
                   <div
                     key={link.id}
@@ -228,17 +228,19 @@ function Footer() {
                 ))}
               </div>
 
-              <div className="inner-bottom grid grid-cols-4 gap-12">
+              <div className="inner-bottom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                 {infoLinks.map((infoLink) => (
                   <div key={infoLink.id} className="infoLink">
                     {infoLink.type ? (
-                      <div className="flex flex-col gap-6">
+                      <div className="flex md:flex-col gap-6">
                         <div className="title font-semibold uppercase text-lg">
                           {infoLink.title}
                         </div>
 
-                        <div className="list flex flex-col gap-1.5">
-                          <div className="number">{infoLink.number}</div>
+                        <div className="list flex flex-col gap-1.5 w-full items-end md:items-start">
+                          <div className="number whitespace-nowrap">
+                            {infoLink.number}
+                          </div>
 
                           <div className="email">{infoLink.email}</div>
 
@@ -248,15 +250,17 @@ function Footer() {
                         </div>
                       </div>
                     ) : (
-                      <div className="flex flex-col gap-6">
-                        <div className="title uppercase text-lg font-semibold">
+                      <div className="flex md:flex-col gap-6">
+                        <div className="title uppercase text-lg font-semibold whitespace-nowrap">
                           {infoLink.title}
                         </div>
 
-                        <div className="list flex flex-col gap-1.5">
+                        <div className="list flex flex-col gap-1.5 w-full items-end md:items-start">
                           <div className="subtitle">{infoLink.subtitle}</div>
 
-                          <div className="email">{infoLink.email}</div>
+                          <div className="email whitespace-nowrap">
+                            {infoLink.email}
+                          </div>
                         </div>
                       </div>
                     )}
@@ -269,12 +273,20 @@ function Footer() {
 
         <div className="footer-bottom bg-dark-gray text-white py-8">
           <Container>
-            <div className="flex justify-between items-center text-sm">
+            <div
+              className={cn(
+                "flex flex-col lg:flex-row lg:justify-between lg:items-center",
+                "text-sm gap-6"
+              )}>
               <div className="footer-copyright font-light">
                 © НАРХОЗ - 2024. Все права защищены
               </div>
 
-              <div className="policy-confidentiality flex items-center gap-6">
+              <div
+                className={cn(
+                  "policy-confidentiality flex items-center gap-6 w-full justify-between",
+                  "lg:justify-start lg:w-fit"
+                )}>
                 <div className="policy">Пользовательское соглашение</div>
 
                 <div className="confidentiality">

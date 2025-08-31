@@ -13,7 +13,7 @@ function ContactForm() {
       </div>
 
       <form className="forms-wrapper flex flex-col gap-3 w-full">
-        <div className="name-email w-full grid grid-cols-2 gap-3">
+        <div className="name-email w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
           <input
             type="text"
             name="name"

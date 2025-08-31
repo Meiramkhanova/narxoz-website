@@ -10,10 +10,10 @@ interface LayoutProps {
 function Layout({ children, hero }: LayoutProps) {
   return (
     <div className="layout-wrapper font-myfont">
-      <div className="header-main-wrapper h-screen bg-[url(/images/photo1.png)] bg-cover bg-center">
+      <div className="header-main-wrapper h-auto lg:h-screen bg-[url(/images/photo1.png)] bg-cover bg-center">
         <Header />
 
-        <div className="h-[calc(100vh-7rem)]">{hero}</div>
+        <div className="h-auto lg:h-[calc(100vh-7rem)]">{hero}</div>
       </div>
 
       <main>{children}</main>

@@ -1,3 +1,4 @@
+import { cn } from "../../shared/utils/cn";
 import VacancyItem from "./components/VacancyItem";
 
 const vacancies = [
@@ -17,8 +18,12 @@ const vacancies = [
 
 function RightMainSection() {
   return (
-    <div className="right-main-section h-full w-3/5 flex justify-end items-center pr-16">
-      <div className="flex flex-col gap-6">
+    <div
+      className={cn(
+        "right-main-section lg:h-full w-full lg:w-2/5 px-6 md:px-12 lg:pl-20 lg:pr-0 xl:w-1/2 2xl:w-3/5",
+        "flex lg:justify-end lg:items-center pr-6 md:pr-12 lg:pr-16 pb-28 lg:pb-0"
+      )}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
         {vacancies.map((vacancy) => (
           <VacancyItem {...vacancy} key={vacancy.id} />
         ))}

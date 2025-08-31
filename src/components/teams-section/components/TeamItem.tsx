@@ -17,8 +17,8 @@ function TeamItem({ name, position, email, image }: TeamItemProps) {
           alt="position-image"
           loading="lazy"
           className={cn(
-            "aspect-[10/11] object-cover hover:scale-105",
-            "hover:brightness-90 transition-all duration-500"
+            "aspect-5/4 lg:aspect-square size-full xl:aspect-[10/11] object-cover hover:scale-105",
+            "hover:brightness-90 transition-all duration-500 object-[50%_30%]"
           )}
         />
       </div>

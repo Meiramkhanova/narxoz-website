@@ -1,3 +1,5 @@
+import { cn } from "../../../shared/utils/cn";
+
 interface VacancyItemProps {
   id?: number;
   title: string;
@@ -7,7 +9,11 @@ interface VacancyItemProps {
 
 function VacancyItem({ title, priceFrom, priceTo }: VacancyItemProps) {
   return (
-    <div className="vacancy-item bg-white rounded-md p-6 flex flex-col gap-3">
+    <div
+      className={cn(
+        "vacancy-item bg-white rounded-lg flex flex-col",
+        "gap-1.5 xl:gap-3 p-4 lg:p-6"
+      )}>
       <span className="vacancy-title font-semibold text-lg tracking-wide">
         {title}
       </span>

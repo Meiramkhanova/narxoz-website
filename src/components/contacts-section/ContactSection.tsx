@@ -5,7 +5,7 @@ function ContactSection() {
   return (
     <section className="contact-section">
       <Container>
-        <div className="wrapper grid grid-cols-2 gap-12 pb-20">
+        <div className="wrapper grid grid-cols-1 lg:grid-cols-2 gap-12 pb-20">
           <div className="left-contact-form h-full flex items-center">
             <ContactForm />
           </div>

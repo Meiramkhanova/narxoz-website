@@ -28,7 +28,7 @@ function DocumentsSection() {
         <div className="wrapper pb-20 flex flex-col gap-6">
           <SectionTitle title="Нормативные документы" />
 
-          <div className="documents-wrapper grid grid-cols-4 gap-6">
+          <div className="documents-wrapper  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
             {documents.map((document) => (
               <DocumentItem key={document.id} title={document.title} />
             ))}
