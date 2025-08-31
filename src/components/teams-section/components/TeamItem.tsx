@@ -30,7 +30,7 @@ function TeamItem({ name, position, email, image }: TeamItemProps) {
       <div
         className={cn(
           "email underline underline-offset-2 text-sm px-3 hover:text-primary",
-          "transition-all duration-300 cursor-pointer"
+          "transition-all duration-300 cursor-pointer mt-auto"
         )}>
         {email}
       </div>
