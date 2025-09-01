@@ -1,6 +1,7 @@
 import { AlignJustify, ScanEye, Search } from "lucide-react";
-import Logo from "../../assets/Logo";
 import { cn } from "../../shared/utils/cn";
+import Logo from "../../shared/ui/icons/Logo";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -9,7 +10,9 @@ function Header() {
         <div className="overlay absolute inset-0 w-full lg:w-3/5 xl:w-1/2 2xl:w-2/5 bg-black/70" />
 
         <div className="flex items-center justify-between h-full relative z-10 pl-6 md:pl-12 lg:pl-16">
-          <Logo />
+          <Link to={"/"}>
+            <Logo />
+          </Link>
 
           <div className="right nav-icons flex items-center gap-6 pr-6 md:pr-12 lg:pr-16">
             <div

@@ -1,4 +1,4 @@
-import PdfIcon from "../../../assets/PdfIcon";
+import PdfIcon from "../../../shared/ui/icons/PdfIcon";
 import { cn } from "../../../shared/utils/cn";
 
 interface DocumentItemProps {

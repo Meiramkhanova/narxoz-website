@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../shared/ui/Button";
 import { cn } from "../../shared/utils/cn";
 import RightMainSection from "./RightMainSection";
@@ -21,9 +22,11 @@ function MainSection() {
               </div>
 
               <div className="btns flex flex-col sm:flex-row sm:items-center gap-3">
-                <Button size="lg" className="uppercase">
-                  Перейти к вакансиям
-                </Button>
+                <Link to={"/vacancies"}>
+                  <Button size="lg" className="uppercase">
+                    Перейти к вакансиям
+                  </Button>
+                </Link>
 
                 <Button size="lg" variant="secondary" className="uppercase">
                   Hr портал

@@ -1,7 +1,7 @@
-import ContactSection from "../components/contacts-section/ContactSection";
-import DocumentsSection from "../components/documents-section/DocumentsSection";
-import StructureSection from "../components/structure-section/StructureSection";
-import OurTeamSection from "../components/teams-section/OurTeamSection";
+import ContactSection from "../widgets/contacts-section/ContactSection";
+import DocumentsSection from "../widgets/documents-section/DocumentsSection";
+import StructureSection from "../widgets/structure-section/StructureSection";
+import OurTeamSection from "../widgets/teams-section/OurTeamSection";
 
 function HomePage() {
   return (

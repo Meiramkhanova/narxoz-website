@@ -1,9 +1,10 @@
-import Facebook from "../../assets/Facebook";
-import Instagram from "../../assets/Instagram";
-import LogoAnother from "../../assets/LogoAnother";
-import Telegram from "../../assets/Telegram";
-import Youtube from "../../assets/Youtube";
+import { Link } from "react-router-dom";
 import Container from "../../shared/ui/Container";
+import Facebook from "../../shared/ui/icons/Facebook";
+import Instagram from "../../shared/ui/icons/Instagram";
+import LogoAnother from "../../shared/ui/icons/LogoAnother";
+import Telegram from "../../shared/ui/icons/Telegram";
+import Youtube from "../../shared/ui/icons/Youtube";
 import { cn } from "../../shared/utils/cn";
 
 const links = [
@@ -179,7 +180,9 @@ function Footer() {
           <Container>
             <div className="inner-wrapper flex flex-col gap-12">
               <div className="inner-top grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                <LogoAnother className="w-48 order-1 h-fit" />
+                <Link to={"/"}>
+                  <LogoAnother className="w-48 order-1 h-fit" />
+                </Link>
 
                 <div className="contacts flex flex-col gap-6 order-3 md:order-2">
                   <div className="contact-title font-semibold">Контакты</div>
